@@ -35,7 +35,7 @@ string(TOUPPER "${PROJECT_NAME}" PROJECT_NAME_UPPER)
 set(${PROJECT_NAME}_DESCRIPTION_SUMMARY "C++ library for serialize using CDR serialization")
 set(${PROJECT_NAME}_DESCRIPTION "eProsima ${PROJECT_NAME_LARGE} library provides two serialization mechanisms. One is the standard CDR serialization mechanism, while the other is a faster implementation that modifies the standard.")
 
-message(STATUS "Configuring ${PROJECT_NAME_LAGE}")
+message(STATUS "Configuring ${PROJECT_NAME_LARGE}")
 
 ###############################################################################
 # Version information                                                         #
@@ -103,6 +103,15 @@ else()
 endif()
 
 ###############################################################################
+# GCC colors if using CCache
+###############################################################################
+if("${CMAKE_CXX_COMPILER_LAUNCHER}" STREQUAL "ccache" AND
+        CMAKE_COMPILER_IS_GNUCXX AND
+        CMAKE_CXX_COMPILER_VERSION VERSION_GREATER 4,8)
+    add_compile_options(-fdiagnostics-color=always)
+endif()
+
+###############################################################################
 # Default shared libraries
 ###############################################################################
 # Global flag to cause add_library() to create shared libraries if on.
@@ -126,6 +135,7 @@ endif()
 ###############################################################################
 include(${PROJECT_SOURCE_DIR}/cmake/dev/check_configuration.cmake)
 check_stdcxx()
+check_compile_feature()
 check_endianness()
 
 ###############################################################################
@@ -152,6 +162,15 @@ endif()
 # Compile library.
 ###############################################################################
 add_subdirectory(src/cpp)
+
+###############################################################################
+# Testing options
+###############################################################################
+option(EPROSIMA_BUILD_TESTS "Activate the building and execution unit tests and integral tests" OFF)
+
+if(EPROSIMA_BUILD AND NOT EPROSIMA_INSTALLER AND NOT EPROSIMA_INSTALLER_MINION)
+    set(EPROSIMA_BUILD_TESTS ON)
+endif()
 
 ###############################################################################
 # Testing
