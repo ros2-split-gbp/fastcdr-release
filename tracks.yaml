@@ -18,7 +18,7 @@ tracks:
     patches: xenial
     release_inc: '3'
     release_repo_url: git@github.com:ros2-gbp/fastcdr-release
-    release_tag: 0860e7c9054aae80d8d8c1cee6a1dd6ce3ae4f2
+    release_tag: 8d1489780cd58947e5f7104b84641f680224cdea
     ros_distro: ardent
     vcs_type: git
     vcs_uri: https://github.com/eProsima/Fast-CDR.git
