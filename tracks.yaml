@@ -16,7 +16,7 @@ tracks:
     last_version: 1.0.7
     name: upstream
     patches: xenial
-    release_inc: '3'
+    release_inc: '4'
     release_repo_url: git@github.com:ros2-gbp/fastcdr-release
     release_tag: 8d1489780cd58947e5f7104b84641f680224cdea
     ros_distro: ardent
