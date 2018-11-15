@@ -98,22 +98,6 @@ message(STATUS "To change de version modify the file configure.ac")
 # Generation of windows installers.
 ###############################################################################
 option(EPROSIMA_INSTALLER "Activate the creation of a build to create windows installers" OFF)
-if(WIN32)
-    option(EPROSIMA_INSTALLER_MINION "Informs this is part of an installer" OFF)
-endif()
-
-###############################################################################
-# Warning level
-###############################################################################
-if(MSVC OR MSVC_IDE)
-    if(CMAKE_CXX_FLAGS MATCHES "/W[0-4]")
-        string(REGEX REPLACE "/W[0-4]" "/W4" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
-    else()
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4")
-    endif()
-else()
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pedantic -Wextra")
-endif()
 
 ###############################################################################
 # GCC colors if using CCache
@@ -137,7 +121,6 @@ option(BUILD_SHARED_LIBS "Create shared libraries by default" ON)
 ###############################################################################
 
 option(EPROSIMA_BUILD "Activate internal building" OFF)
-option(MINION "Tells if it is a subproject of a superproject" OFF)
 
 if(EPROSIMA_INSTALLER)
     set(EPROSIMA_BUILD ON)
