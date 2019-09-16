@@ -1,0 +1,12 @@
+Source: ros-eloquent-fastcdr
+Section: misc
+Priority: extra
+Maintainer: Steven! Ragnarök <stevenragnarok@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), cmake, ros-eloquent-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-eloquent-fastcdr
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-eloquent-ros-workspace
+Description: CDR serialization implementation.
