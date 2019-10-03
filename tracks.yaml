@@ -87,11 +87,11 @@ tracks:
     - git-bloom-generate -y rosrpm --prefix release/:{ros_distro} :{ros_distro} -i
       :{release_inc}
     devel_branch: master
-    last_release: 906c966c426f85d503baca9c2e46bead7b633dff
-    last_version: 1.0.9
+    last_release: v1.0.11
+    last_version: 1.0.11
     name: fastcdr
     patches: dashing
-    release_inc: '2'
+    release_inc: '1'
     release_repo_url: https://github.com/ros2-gbp/fastcdr-release.git
     release_tag: v:{version}
     ros_distro: dashing
