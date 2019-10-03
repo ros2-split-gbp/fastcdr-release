@@ -1,3 +1,26 @@
+## fastcdr (dashing) - 1.0.11-1
+
+The packages in the `fastcdr` repository were released into the `dashing` distro by running `/usr/bin/bloom-release -r dashing fastcdr --override-release-repository-push-url git@github.com:ros2-gbp/fastcdr-release` on `Thu, 03 Oct 2019 18:41:03 -0000`
+
+The `fastcdr` package was released.
+
+Version of package(s) in repository `fastcdr`:
+
+- upstream repository: https://github.com/eProsima/Fast-CDR.git
+- release repository: https://github.com/ros2-gbp/fastcdr-release.git
+- rosdistro version: `1.0.9-2`
+- old version: `1.0.9-2`
+- new version: `1.0.11-1`
+
+Versions of tools used:
+
+- bloom version: `0.8.0`
+- catkin_pkg version: `0.4.12`
+- rosdep version: `0.15.2`
+- rosdistro version: `0.7.4`
+- vcstools version: `0.1.40`
+
+
 ## fastcdr (eloquent) - 1.0.11-1
 
 The packages in the `fastcdr` repository were released into the `eloquent` distro by running `/usr/bin/bloom-release -n -r eloquent fastcdr --override-release-repository-push-url git@github.com:ros2-gbp/fastcdr-release` on `Mon, 16 Sep 2019 15:58:38 -0000`
