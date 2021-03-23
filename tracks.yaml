@@ -224,4 +224,4 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/eProsima/Fast-CDR.git
-    version: 1.0.13
+    version: 1.0.20
