@@ -48,6 +48,7 @@ mkdir -p .obj-%{_target_platform} && cd .obj-%{_target_platform}
     -DCMAKE_INSTALL_PREFIX="@(InstallationPrefix)" \
     -DCMAKE_PREFIX_PATH="@(InstallationPrefix)" \
     -DSETUPTOOLS_DEB_LAYOUT=OFF \
+    -DAPPEND_PROJECT_NAME_TO_INCLUDEDIR=ON \
 %if !0%{?with_tests}
     -DBUILD_TESTING=OFF \
 %endif
