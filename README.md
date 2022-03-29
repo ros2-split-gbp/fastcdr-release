@@ -1,3 +1,26 @@
+## fastcdr (rolling) - 1.0.24-2
+
+The packages in the `fastcdr` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --track rolling --rosdistro rolling fastcdr` on `Tue, 29 Mar 2022 14:07:30 -0000`
+
+The `fastcdr` package was released.
+
+Version of package(s) in repository `fastcdr`:
+
+- upstream repository: https://github.com/eProsima/Fast-CDR.git
+- release repository: https://github.com/ros2-gbp/fastcdr-release.git
+- rosdistro version: `1.0.24-1`
+- old version: `1.0.24-1`
+- new version: `1.0.24-2`
+
+Versions of tools used:
+
+- bloom version: `0.10.7`
+- catkin_pkg version: `0.4.24`
+- rosdep version: `0.21.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## fastcdr (rolling) - 1.0.24-1
 
 The packages in the `fastcdr` repository were released into the `rolling` distro by running `/home/steven/osrf/bloom/.direnv/python-3.10.2/bin/bloom-release -e -r rolling fastcdr` on `Fri, 18 Mar 2022 16:45:11 -0000`
