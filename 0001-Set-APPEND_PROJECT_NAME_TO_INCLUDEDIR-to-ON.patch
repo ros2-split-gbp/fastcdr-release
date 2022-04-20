@@ -1,0 +1,24 @@
+From 67cf5171a213ea358e467b4aecd1f289cc7bd591 Mon Sep 17 00:00:00 2001
+From: Shane Loretz <sloretz@openrobotics.org>
+Date: Mon, 21 Mar 2022 14:16:01 -0700
+Subject: [PATCH] Set APPEND_PROJECT_NAME_TO_INCLUDEDIR to ON
+
+---
+ rpm/template.spec.em | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/rpm/template.spec.em b/rpm/template.spec.em
+index b1217d0..6e4dc04 100644
+--- a/rpm/template.spec.em
++++ b/rpm/template.spec.em
+@@ -51,6 +51,7 @@ mkdir -p .obj-%{_target_platform} && cd .obj-%{_target_platform}
+ %if !0%{?with_tests}
+     -DBUILD_TESTING=OFF \
+ %endif
++    -DAPPEND_PROJECT_NAME_TO_INCLUDEDIR=ON \
+     ..
+ 
+ %make_build
+-- 
+2.35.3
+
